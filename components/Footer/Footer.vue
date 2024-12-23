@@ -6,74 +6,28 @@
         md="3"
         cols="12"
       >
-        <div class="logo">
-          <img
-            :src="logo"
-            alt="logo"
-          >
+        <div class="logo">          
           <h6 class="use-text-subtitle2 font-weight-bold">
             {{ brand.medical.projectName }}
-          </h6>
-        </div>
-        <p class="footer-desc pb-2">
-          {{ $t('medicalLanding.footer_paragraph') }}
-        </p>
-        <p v-if="isDesktop" class="body-2">
-          &copy;&nbsp;
-          {{ brand.medical.footerText }}
-        </p>
+          </h6>          
+        </div> 
+        <ul>
+          <li>
+            Rottenhof 29
+          </li>
+          <li>
+            3681 Hofamt Priel
+          </li>
+        </ul>               
       </v-col>
       <v-col
         class="pa-6"
         md="6"
         cols="12"
       >
-        <v-expansion-panels v-if="isMobile" class="accordion-root">
-          <v-expansion-panel
-            v-for="(footer, index) in footers"
-            :key="index"
-            class="accordion-content"
-          >
-            <v-expansion-panel-title>
-              <h6 class="text-h6">
-                {{ footer.title }}
-              </h6>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <ul>
-                <li
-                  v-for="(item, index) in footer.description"
-                  :key="index"
-                >
-                  <nuxt-link :to="footer.link[index]">
-                    {{ item }}
-                  </nuxt-link>
-                </li>
-              </ul>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-        </v-expansion-panels>
-        <v-row v-if="isDesktop" justify="space-around">
-          <v-col
-            v-for="(footer, index) in footers"
-            :key="index"
-            sm="3"
-            cols="12"
-            class="px-lg-4 px-0 site-map-item"
-          >
-            <h6 class="title-nav">
-              {{ footer.title }}
-            </h6>
-            <ul>
-              <li
-                v-for="(item, index) in footer.description"
-                :key="index"
-              >
-                <nuxt-link :to="footer.link[index]">
-                  {{ item }}
-                </nuxt-link>
-              </li>
-            </ul>
+        <v-row justify="space-around">
+          <v-col cols="12">            
+            
           </v-col>
         </v-row>
       </v-col>
@@ -82,28 +36,7 @@
         cols="12"
         class="pa-4"
       >
-        <div class="socmed">
-          <v-btn
-            text
-            icon
-            class="button"
-          >
-            <span class="ion-logo-facebook icon" />
-          </v-btn>
-          <v-btn
-            text
-            icon
-            class="button"
-          >
-            <span class="ion-logo-twitter  icon" />
-          </v-btn>
-          <v-btn
-            text
-            icon
-            class="button"
-          >
-            <span class="ion-logo-instagram icon" />
-          </v-btn>
+        <div class="socmed">   
           <v-btn
             text
             icon
@@ -112,21 +45,11 @@
             <span class="ion-logo-linkedin icon" />
           </v-btn>
         </div>
-        <v-select
-          v-model="lang"
-          :items="langList"
-          :value="curLang"
-          variant="outlined"
-          class="select-lang"
-          color="primary"
-          prepend-inner-icon="mdi-web"
-          @update:model-value="switchLang(lang)"
-        />
       </v-col>
     </v-row>
-    <p v-if="isMobile" class="body-2 text-center">
-      &copy;&nbsp;
-      {{ brand.medical.footerText }}
+    <p v-if="isDesktop" class="body-2">
+          &copy;&nbsp;
+        {{ brand.medical.footerText }}
     </p>
   </v-container>
 </template>

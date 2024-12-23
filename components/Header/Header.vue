@@ -1,13 +1,4 @@
 <template>
-  <v-navigation-drawer
-    v-if="isMobile"
-    v-model="openDrawer"
-    fixed
-    temporary
-    class="mobile-nav"
-  >
-    <mobile-menu :open="openDrawer" />
-  </v-navigation-drawer>
   <v-app-bar
     id="header"
     v-scroll="handleScroll"
@@ -21,18 +12,6 @@
           :class="{ invert: invert }"
           class="nav-logo"
         >
-          <v-btn
-            v-if="isMobile"
-            :class="{ 'is-active': openDrawer }"
-            class="hamburger hamburger--spin mobile-menu"
-            variant="text"
-            icon
-            @click.stop="handleToggleOpen"
-          >
-            <span class="hamburger-box">
-              <span class="bar hamburger-inner" />
-            </span>
-          </v-btn>
           <div class="logo">
             <nuxt-link
               v-if="invert"
@@ -63,41 +42,7 @@
           :class="{ invert: invert }"
           class="nav-menu"
         >
-          <div v-if="isDesktop">
-            <ul class="scrollactive-nav">
-              <li
-                v-for="(item, index) in menuList"
-                :key="index"
-              >
-                <v-btn
-                  v-if="!invert"
-                  v-smooth-scroll="{ offset: -100 }"
-                  :href="item.url"
-                  :class="{ active: activeMenu === item.name }"
-                  class="menu-link"
-                  variant="text"
-                  @click="scrollToMyEl(item.name)"
-                  v-text="$t('medicalLanding.header_'+item.name)"
-                />
-                <v-btn
-                  v-if="invert"
-                  :to="localePath('/') + item.url"
-                  variant="text"
-                >
-                  {{ $t('medicalLanding.header_'+item.name) }}
-                </v-btn>
-              </li>
-              <li>
-                <v-btn
-                  :to="localePath(link.medical.contact)"
-                  variant="text"
-                >
-                  {{ $t('medicalLanding.header_contact') }}
-                </v-btn>
-              </li>
-            </ul>
-          </div>
-          <setting-menu :invert="invert" />
+          
         </nav>
       </div>
     </v-container>
@@ -172,12 +117,7 @@ export default {
 			openDrawer: null,
 			navOffset: 20,
 			activeMenu: "",
-			menuList: [
-				createData(navMenu[0], "#" + navMenu[0]),
-				createData(navMenu[1], "#" + navMenu[1]),
-				createData(navMenu[2], "#" + navMenu[2]),
-				createData(navMenu[3], "#" + navMenu[3], -40),
-			],
+			menuList: [createData(navMenu[0], "#" + navMenu[0])],
 		};
 	},
 	computed: {

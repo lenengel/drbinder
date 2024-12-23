@@ -14,9 +14,11 @@
           <v-col cols="12" md="4">
             <v-row justify="end">
               <v-btn
-                :to="localePath(link.contact)"
-                color="primary"
+                href="https://wa.me/+4369981758949?text=Hallo,%20ich%20möchte%20gerne%20einen%20Termin%20vereinbaren."
+                target="_blank"
+                color="success"
                 class="button"
+                prepend-icon="mdi-whatsapp"
               >
                 {{ $t('medicalLanding.cta_btn') }}
               </v-btn>
@@ -33,26 +35,26 @@
 </style>
 
 <script>
-import link from '@/assets/text/link';
-import { useLocalePath } from '#imports';
+import link from "@/assets/text/link";
+import { useLocalePath } from "#imports";
 
 export default {
-  setup() {
-    const localePath = useLocalePath();
-    return {
-      localePath,
-    };
-  },
-  data() {
-    return {
-      link,
-    };
-  },
-  computed: {
-    mdUp() {
-      const mdUp = this.$vuetify.display.mdAndUp;
-      return mdUp;
-    },
-  },
+	setup() {
+		const localePath = useLocalePath();
+		return {
+			localePath,
+		};
+	},
+	data() {
+		return {
+			link,
+		};
+	},
+	computed: {
+		mdUp() {
+			const mdUp = this.$vuetify.display.mdAndUp;
+			return mdUp;
+		},
+	},
 };
 </script>

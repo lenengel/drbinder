@@ -3,27 +3,9 @@
     <main-container nav-scroll>
       <oval-top />
       <section id="home">
-        <video-banner />
-      </section>
-      <section
-        id="about"
-        class="space-top-short"
-      >
-        <about />
-      </section>
-      <dots-parallax />
-      <section
-        id="our-expertise"
-        :class="[isTablet ? 'space-top-short' : 'space-top']"
-      >
-        <expertise />
-      </section>
-      <section
-        id="testimonials"
-        class="space-top-short"
-      >
-        <testimonials />
-      </section>
+        <photo-banner />
+      </section>      
+      
       <section id="call-to-action" class="space-top-short">
         <call-action />
       </section>
@@ -70,7 +52,7 @@
 import { onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import MainContainer from "@/components/MainContainer";
-import VideoBanner from "@/components/VideoBanner";
+import PhotoBanner from "@/components/PhotoBanner";
 import About from "@/components/About";
 import Expertise from "@/components/Expertise";
 import Testimonials from "@/components/Testimonials";
@@ -88,7 +70,7 @@ export default defineNuxtComponent({
 		MainContainer,
 		DotsParallax,
 		OvalTop,
-		VideoBanner,
+		PhotoBanner,
 		About,
 		Expertise,
 		Testimonials,

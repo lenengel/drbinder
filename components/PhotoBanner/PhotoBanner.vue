@@ -1,10 +1,5 @@
 <template>
-  <div class="hero-content">
-    <hidden point="smUp">
-      <figure class="mobile-cover">
-        <img :src="cover" alt="Dr. Binder Office" />
-      </figure>
-    </hidden>
+  <div class="hero-content">    
     <v-container :class="{ 'fixed-width': mdUp }">
       <v-row>
         <v-col cols="12" md="6">
@@ -16,25 +11,7 @@
             </div>
             <h5 class="subtitle use-text-subtitle2">
               {{ $t('medicalLanding.banner_subtitle') }}
-            </h5>
-            <v-card class="search-banner">
-              <v-text-field
-                :label="isMobile2 ? 'Search...' : 'Search doctor, medicines or clinic...'"
-                class="search"
-                hide-details
-                variant="filled"
-              />
-              <div class="action">
-                <v-btn class="button" color="secondary">
-                  <v-icon v-if="isMobile" class="icon">
-                    mdi-magnify
-                  </v-icon>
-                  <span v-if="isDesktop">
-                    {{ $t('medicalLanding.banner_search') }}
-                  </span>
-                </v-btn>
-              </div>
-            </v-card>
+            </h5>            
           </div>
         </v-col>
         <v-col
@@ -43,9 +20,6 @@
           cols="12"
           class="pa-6 visual-content"
         >
-          <div class="deco-banner">
-            <div class="menu-bg" />
-          </div>
           <div class="image-wrap">
             <div class="image-figure">
               <div class="inner-figure">
