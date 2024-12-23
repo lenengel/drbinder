@@ -6,19 +6,17 @@
         md="3"
         cols="12"
       >
-        <div class="logo">          
-          <h6 class="use-text-subtitle2 font-weight-bold">
-            {{ brand.medical.projectName }}
-          </h6>          
-        </div> 
-        <ul>
-          <li>
-            Rottenhof 29
-          </li>
-          <li>
+        <div class="logo">                    
+            <h6 class="use-text-subtitle2 font-weight-bold">
+              {{ brand.medical.projectName }}
+            </h6>    
+        </div>
+        <div class="logo">
+          <div class="text-caption">          
+            Rottenhof 29<br>
             3681 Hofamt Priel
-          </li>
-        </ul>               
+          </div>        
+        </div>
       </v-col>
       <v-col
         class="pa-6"

@@ -18,7 +18,7 @@
           v-if="isTablet"
           md="6"
           cols="12"
-          class="pa-6 visual-content"
+          class="pa-6 visual-content justify-center"
         >
           <div class="image-wrap">
             <div class="image-figure">

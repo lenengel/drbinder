@@ -164,12 +164,13 @@
   height: 550px;
   margin-top: $spacing8;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
+  margin: auto;
 }
 
 .image-figure {
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 100%;  
 }
 
 .inner-figure {
