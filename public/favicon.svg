@@ -1,0 +1,34 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 366 366" width="512" height="512">
+	<title>+</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m366 185v183h-183v-183z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m183 0v185h-183v-185z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: #e1f6f0 } 
+		.s1 { fill: #c4efe3 } 
+		.s2 { fill: #a6e6d4 } 
+		.s3 { fill: #6bd6b8 } 
+		.s4 { fill: #ffffff } 
+	</style>
+	<g id="Layer 1">
+		<path id="Form 1" fill-rule="evenodd" class="s0" d="m183 368c-101.2 0-183-81.8-183-183 0-101.2 81.8-183 183-183 101.2 0 183 81.8 183 183 0 101.2-81.8 183-183 183z"/>
+		<path id="Form 2" fill-rule="evenodd" class="s1" d="m183 322c-75.8 0-137-61.2-137-137 0-75.8 61.2-137 137-137 75.8 0 137 61.2 137 137 0 75.8-61.2 137-137 137z"/>
+		<path id="Form 3" fill-rule="evenodd" class="s2" d="m182.5 280c-52.8 0-95.5-42.7-95.5-95.5 0-52.8 42.7-95.5 95.5-95.5 52.8 0 95.5 42.7 95.5 95.5 0 52.8-42.7 95.5-95.5 95.5z"/>
+		<path id="Form 4" fill-rule="evenodd" class="s3" d="m182.5 234c-27.4 0-49.5-22.1-49.5-49.5 0-27.4 22.1-49.5 49.5-49.5 27.4 0 49.5 22.1 49.5 49.5 0 27.4-22.1 49.5-49.5 49.5z"/>
+		<g id="Ordner 1">
+			<g id="&lt;Clip Group&gt;" clip-path="url(#cp1)">
+				<path id="Form 1 copy" fill-rule="evenodd" class="s4" d="m183 368c-101.2 0-183-81.8-183-183 0-101.2 81.8-183 183-183 101.2 0 183 81.8 183 183 0 101.2-81.8 183-183 183z"/>
+			</g>
+		</g>
+		<g id="Ordner 2">
+			<g id="&lt;Clip Group&gt;" clip-path="url(#cp2)">
+				<path id="Form 1 copy 2" fill-rule="evenodd" class="s4" d="m183 368c-101.2 0-183-81.8-183-183 0-101.2 81.8-183 183-183 101.2 0 183 81.8 183 183 0 101.2-81.8 183-183 183z"/>
+			</g>
+		</g>
+	</g>
+</svg>

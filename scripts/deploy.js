@@ -56,7 +56,7 @@ async function deploy() {
 		});
 
 		console.log("Connected! Starting upload...");
-		const localDir = path.join(process.cwd(), ".output/public");
+		const localDir = path.join(process.cwd(), "dist");
 		const remoteDir = process.env.FTP_REMOTE_DIR;
 
 		await uploadDirectory(client, localDir, remoteDir);
