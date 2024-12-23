@@ -19,7 +19,7 @@
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
-		"deploy": "nuxt build && node --experimental-json-modules scripts/deploy.js",
+		"deploy": "node --experimental-json-modules scripts/deploy.js",
 		"generate-favicons": "node scripts/generate-favicons.js"
 	},
 	"dependencies": {
