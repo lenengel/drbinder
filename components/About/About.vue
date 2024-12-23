@@ -4,7 +4,10 @@
       <v-row>
         <v-col cols="12" md="5" class="pa-6">
           <div class="text-center">
-            <title-deco :text="$t('medicalLanding.about_title')" :bg="photo" />
+            <div class="portrait-wrapper mb-6">
+              <img :src="photo" alt="Dr. Binder Portrait" />
+            </div>
+            <title-deco :text="$t('medicalLanding.about_title')" />
           </div>
         </v-col>
         <v-col cols="12" md="7" class="pa-6">
@@ -27,25 +30,25 @@
 </style>
 
 <script>
-import imgAPI from '@/assets/images/imgAPI';
-import Counter from '../Counter';
-import TitleDeco from '../Title/WithDecoration';
+import imgAPI from "@/assets/images/imgAPI";
+import Counter from "../Counter";
+import TitleDeco from "../Title/WithDecoration";
 
 export default {
-  components: {
-    Counter,
-    TitleDeco,
-  },
-  data() {
-    return {
-      photo: imgAPI.medical[1],
-    };
-  },
-  computed: {
-    isDesktop() {
-      const lgUp = this.$vuetify.display.lgAndUp;
-      return lgUp;
-    },
-  },
+	components: {
+		Counter,
+		TitleDeco,
+	},
+	data() {
+		return {
+			photo: imgAPI.medical[1],
+		};
+	},
+	computed: {
+		isDesktop() {
+			const lgUp = this.$vuetify.display.lgAndUp;
+			return lgUp;
+		},
+	},
 };
 </script>

@@ -2,10 +2,7 @@
   <div class="hero-content">
     <hidden point="smUp">
       <figure class="mobile-cover">
-        <img
-          :src="cover"
-          alt="cover"
-        >
+        <img :src="cover" alt="Dr. Binder Office" />
       </figure>
     </hidden>
     <v-container :class="{ 'fixed-width': mdUp }">
@@ -48,47 +45,11 @@
         >
           <div class="deco-banner">
             <div class="menu-bg" />
-            <div class="video-bg" />
           </div>
-          <div class="video-wrap">
-            <div class="video-figure">
+          <div class="image-wrap">
+            <div class="image-figure">
               <div class="inner-figure">
-                <hidden point="mdDown">
-                  <v-btn
-                    v-if="play"
-                    icon
-                    variant="text"
-                    class="btn-play"
-                    @click="togglePause()"
-                  >
-                    <v-icon v-if="playCtrl">
-                      mdi-pause
-                    </v-icon>
-                    <v-icon v-else>
-                      mdi-play
-                    </v-icon>
-                  </v-btn>
-                </hidden>
-                <img
-                  v-if="!play || isMobile"
-                  :src="cover"
-                  alt="cover"
-                >
-                <div
-                  v-if="yt.use"
-                  class="video"
-                >
-                  <YouTube
-                    v-if="isDesktop"
-                    ref="youtube"
-                    :src="videoId"
-                    :vars="playerVars"
-                    :width="1080"
-                    :height="720"
-                    @ready="playing"
-                    @state-change="ended"
-                  />
-                </div>
+                <img :src="cover" alt="Dr. Binder Office" />
               </div>
             </div>
           </div>
@@ -106,76 +67,41 @@
 </style>
 
 <script>
-import imgAPI from '@/assets/images/imgAPI';
-import DotsParallax from '../Parallax/Dots';
-import youtube from '@/config/youtube';
-import Hidden from '../Hidden';
+import imgAPI from "@/assets/images/imgAPI";
+import DotsParallax from "../Parallax/Dots";
+import Hidden from "../Hidden";
 
 export default {
-  components: {
-    Hidden,
-    DotsParallax,
-  },
-  data() {
-    return {
-      videoId: 'sbef4EWb4js',
-      playerVars: {
-        autoplay: 1,
-        controls: 0,
-        rel: 0,
-        showinfo: 0,
-        mute: 1,
-        origin: 'http://localhost:8009',
-      },
-      yt: youtube,
-      play: false,
-      playCtrl: true,
-      cover: imgAPI.medical[0],
-    };
-  },
-  computed: {
-    player() {
-      return this.$refs.youtube.player;
-    },
-    mdUp() {
-      const mdUp = this.$vuetify.display.mdAndUp;
-      return mdUp;
-    },
-    isDesktop() {
-      const lgUp = this.$vuetify.display.lgAndUp;
-      return lgUp;
-    },
-    isTablet() {
-      const smUp = this.$vuetify.display.smAndUp;
-      return smUp;
-    },
-    isMobile() {
-      const mdDown = this.$vuetify.display.mdAndDown;
-      return mdDown;
-    },
-    isMobile2() {
-      const xsDown = this.$vuetify.display.smAndDown;
-      return xsDown;
-    },
-  },
-  methods: {
-    playing() {
-      this.play = true;
-      this.playCtrl = true;
-    },
-    ended(val) {
-      if (val.data === 0) {
-        this.player.playVideo();
-      }
-    },
-    togglePause() {
-      this.playCtrl = !this.playCtrl;
-      if (this.playCtrl) {
-        this.player.playVideo();
-      } else {
-        this.player.pauseVideo();
-      }
-    },
-  },
+	components: {
+		Hidden,
+		DotsParallax,
+	},
+	data() {
+		return {
+			cover: imgAPI.medical[0], // Using drbinder.png
+		};
+	},
+	computed: {
+		mdUp() {
+			const mdUp = this.$vuetify.display.mdAndUp;
+			return mdUp;
+		},
+		isDesktop() {
+			const lgUp = this.$vuetify.display.lgAndUp;
+			return lgUp;
+		},
+		isTablet() {
+			const smUp = this.$vuetify.display.smAndUp;
+			return smUp;
+		},
+		isMobile() {
+			const mdDown = this.$vuetify.display.mdAndDown;
+			return mdDown;
+		},
+		isMobile2() {
+			const xsDown = this.$vuetify.display.smAndDown;
+			return xsDown;
+		},
+	},
 };
 </script>
