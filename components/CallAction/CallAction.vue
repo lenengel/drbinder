@@ -35,21 +35,7 @@
 </style>
 
 <script>
-import link from "@/assets/text/link";
-import { useLocalePath } from "#imports";
-
 export default {
-	setup() {
-		const localePath = useLocalePath();
-		return {
-			localePath,
-		};
-	},
-	data() {
-		return {
-			link,
-		};
-	},
 	computed: {
 		mdUp() {
 			const mdUp = this.$vuetify.display.mdAndUp;
