@@ -144,17 +144,21 @@ export default defineNuxtConfig({
 	modules: ["@nuxtjs/i18n"],
 
 	i18n: {
-		locales: languages,
+		locales: [
+			{
+				code: "de",
+				iso: "de-DE",
+				name: "Deutch",
+				file: "de-DE.json",
+				dir: "ltr",
+			},
+		],
 		lazy: true,
 		langDir: "lang",
-		defaultLocale: "en",
+		defaultLocale: "de",
 		strategy: "prefix",
-		detectBrowserLanguage: {
-			useCookie: true,
-			cookieKey: "i18n_redirected",
-			redirectOn: "root", // recommended
-		},
-		vueI18n: "./config/i18n.js", // use this options for next vueI18n version
+		detectBrowserLanguage: false,
+		vueI18n: "./config/i18n.js",
 	},
 
 	vite: {
